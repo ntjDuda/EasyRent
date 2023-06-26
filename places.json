@@ -1,0 +1,17 @@
+[
+    {
+      "name": "Local 1",
+      "location": {"lat": -23.5505, "lng": -46.6333},
+      "info": "Informações sobre o Local 1, RUA XXXXXXXXXX, Nº 123"
+    },
+    {
+      "name": "Local 2",
+      "location": {"lat": -23.5600, "lng": -46.6200},
+      "info": "Informações sobre o Local 2,RUA XXXXXXXXXX, Nº 123"
+    },
+    {
+      "name": "Local 3",
+      "location": {"lat": -23.5700, "lng": -46.6100},
+      "info": "Informações sobre o Local 3,RUA XXXXXXXXXX, Nº 123"
+    }
+  ]

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Aluguel de Quadras Esportivas - Easy Rent</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+     <!--Header - menu site-->
+     <header class="header">
+        <a href="" class="logo">Easy Rent</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="indexAlugarQuadras.html">Atletas</a></li>
+            <li><a href="indexContatoDepoisLogin.html">Contato</a></li>
+        </ul>
+    </header>
+
+    <br><br><br>
+
+    <!--Conteúdo pagina de pagamento-->
+    <div class="container">
+        <h1 class="my-4">Formas de pagamento</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary mb-3" id="cartao-btn">Cartão de crédito</button>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary mb-3" id="pix-btn">Pix</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row-4">
+                <div id="cartao-form" class="d-none modal-container">
+                    <form id="cartao-formulario" class="form-horizontal" autocomplete="off" onsubmit="onFormSubmit()">
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="nome">Nome:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="nome" id="nome"
+                                    placeholder="Digite seu Nome">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="cpf">CPF:</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" name="cpf" id="cpf" placeholder="CPF">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="rua">Rua:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="rua" id="rua" placeholder="Rua">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="cidade">Cidade:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Cidade">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">Email:</label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" name="email" id="email"
+                                    placeholder="Digite seu e-mail">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-4" for="NCartao">Numero do cartao:</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" name="NCartao" id="NCartao"
+                                    placeholder="Numero do Cartao">
+                                <button onclick="validarCartao()">Validar</button><br><br>
+                                <div id="resultado"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="cvv">CVV:</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" name="cvv" id="cvv" placeholder="CVV">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="validade">Validade:</label>
+                            <div class="col-sm-9">
+                                <input type="date" class="form-control" name="validade" id="validade"
+                                    placeholder="Validade">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-default" id="btnSalvar">Submit</button>
+                                <button type="reset" class="btn btn-default">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </table>
+        </div>
+        <div id="pix-mensagem" class="d-none">
+            <h2 class="my-4">Número do Pix</h2>
+            <p id="pix-numero"></p>
+        </div>
+    </div>
+
+    <br><br><br><br>
+    
+    <footer class="bg-dark text-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Sobre nós</h5>
+                    <p>Easy Rent é uma empresa especializada em aluguel de quadras esportivas. Temos o compromisso de
+                        oferecer
+                        espaços de alta qualidade para que nossos clientes possam praticar seus esportes favoritos.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Nossos serviços</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="quadras.html">Futebol</a></li>
+                        <li><a href="quadras.html">Tênis</a></li>
+                        <li><a href="quadras.html">Vôlei</a></li>
+                        <li><a href="quadras.html">Basquete</a></li>
+                        <li><a href="quadras.html">Handebol</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li>Telefone: (12121) 1234-5678</a></li>
+                        <li>Email: contato@easyrent.com.br</a></li>
+                        <li>Endereço: Rua XX, XXX,XXXX</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center mt-3">
+                    <p>&copy; 2023 Easy Rent. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js"
+        integrity="sha512-PwYQnkBnnFA4y4rlWEp9nx/3Lqjc/dtJiZSzo7otOvrCwhe1WhzyUGdz40oGmL+9Pwb0ucHsoAOzPSZgOQ9bSg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./scritt.js"></script>
+</body>
+
+</html>

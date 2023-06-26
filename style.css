@@ -1,0 +1,423 @@
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #000;
+}
+
+/* header */
+
+.header {
+    background-color: #fff;
+    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+.header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-btn:hover {
+    background-color: #f4f4f4;
+}
+
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* menu */
+
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* menu icon */
+
+.header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* menu btn */
+
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked~.menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked~.menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+p {
+    font-size: 20px;
+}
+
+/* 48em = 768px */
+
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+
+    .header li a {
+        padding: 20px 30px;
+    }
+
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+.page {
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.62;
+    color: #59666B;
+
+    &__title {
+        text-align: center;
+        font-size: 35px;
+    }
+
+    &__works-section {
+        background: white;
+
+        &__wrapper {
+            margin-top: 86px;
+        }
+
+        &__card {
+            border-radius: 11px;
+            background-color: #FFF;
+            box-shadow: -5px 10px 57px 0 #E3E8FA;
+            padding: 52px 20px 20px;
+            text-align: center;
+            position: relative;
+            height: 265px;
+
+            &__circle {
+                position: absolute;
+                top: 0;
+                left: 50%;
+                background-color: rgba(0, 255, 170, 0.1);
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                display: inline-block;
+                overflow: hidden;
+                transform: translate(-50%, -50%);
+
+                &__inside {
+                    width: 90px;
+                    height: 90px;
+                    background-image: linear-gradient(to bottom right, #00e49e, #98f0d6);
+                    border-radius: 100%;
+                    position: absolute;
+                    display: table;
+                    top: 0;
+                    left: 50%;
+                    transform: translate(-50%, 5%);
+
+                    &__icon {
+                        display: table-cell;
+                        vertical-align: middle;
+                        color: white;
+
+                        &--fontawesome {
+                            font-size: 35px;
+                        }
+                    }
+                }
+            }
+
+            &__title {
+                font-size: 24px;
+                font-weight: 700;
+                margin: 5% 0;
+            }
+
+            &__description {
+                margin: 5% 0;
+            }
+        }
+    }
+}
+
+.button {
+    font-family: "Montserrat", "Helvetica", "Arial", sans-serif;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #18ed8a;
+    color: #fff;
+    font-size: 18px;
+    padding: 20px 40px;
+    line-height: 18px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 50px;
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+
+    &:hover {
+        background-color: #11B83F;
+    }
+}
+
+.layout-center {
+    text-align: center;
+}
+
+html {
+    height: 100%;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(32, 102, 168, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(235, 235, 235, 0.6);
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #ebebeb;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #f8f6f6;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #dfdfdf;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: #fcfcfc;
+    font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #5961d3;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px
+}
+
+.login-box a:hover {
+    background: #5961d3;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #5961d3,
+        0 0 25px #5961d3,
+        0 0 50px #5961d3,
+        0 0 100px #5961d3;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #5961d3);
+    animation: btn-anim1 1s linear infinite;
+}
+
+@keyframes btn-anim1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #5961d3);
+    animation: btn-anim2 1s linear infinite;
+    animation-delay: .25s
+}
+
+@keyframes btn-anim2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #5961d3);
+    animation: btn-anim3 1s linear infinite;
+    animation-delay: .5s
+}
+
+@keyframes btn-anim3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.login-box a span:nth-child(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #5961d3);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+

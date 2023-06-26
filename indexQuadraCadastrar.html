@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Aluguel de Quadras Esportivas - Easy Rent</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="styleCadastroQuadra.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <!--Header-->
+    <header class="header">
+        <a href="indexQuadraCadastrar.html" class="logo">Easy Rent</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="indexContatoDepoisLogin.html">Contato</a></li>
+            <li><a href="perfil.html">Perfil</a></li>
+        </ul>
+    </header>
+
+    <br><br>
+
+    <!--Conteúdo site-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card">
+                    <br><br>
+                    <h3 class="card-title text-center">Cadastrar Quadra</h3>
+                    <br><br>
+                    <form>
+                        <div class="col-4 imagem">
+                            <label for="cadastrarImagem">Imagens da quadra:</label>
+                            <input type="file" accept="image/*" id="cadastrarImagem" name="cadastrarImagem" value="">
+                        </div>
+                        <div class="col-8 cadastro">
+                            <div class="form-group">
+                                <br>
+                                <label for="name-quadra">Nome da Quadra</label>
+                                <input type="text" class="form-control" id="name-quadra"
+                                    placeholder="Digite o Nome da Quadra">
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="name">Endereço</label>
+                                <input type="text" class="form-control" id="name" placeholder="Digite o Endereço">
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="email">Descrição da quadra</label>
+                                <input type="email" class="form-control" id="descricao" placeholder="Descrição da quadra">
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="telContato">Telefone de contato</label>
+                                <input type="tel" class="form-control" id="telContato" placeholder="Digite o Telefone">
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="confirm-password">Valor cobrado por hora</label>
+                                <input type="password" class="form-control" id="confirm-password"
+                                    placeholder="Digite o valor">
+                            </div>
+                            <div class="form-group">
+                                <br>
+                                <label for="confirm-password">A quadra é coberta?</label>
+                                <select name="Coberta">
+                                    <option value="0">Selecione</option>
+                                    <option value="1">Sim</option>
+                                    <option value="2">Não</option>
+                                </select>
+                            </div>
+                            <a href="perfil.html" class="btn btn-block btn-primary bg-dark text-white">Cadastrar</a>
+                            <br>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <br><br>
+
+    <!--Rodape-->
+    <footer class="bg-dark text-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Sobre nós</h5>
+                    <p>Easy Rent é uma empresa especializada em aluguel de quadras esportivas. Temos o compromisso
+                        de
+                        oferecer
+                        espaços de alta qualidade para que nossos clientes possam praticar seus esportes favoritos.
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Nossos serviços</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="precos.html">Futebol</a></li>
+                        <li><a href="precos.html">Tênis</a></li>
+                        <li><a href="precos.html">Vôlei</a></li>
+                        <li><a href="precos.html">Basquete</a></li>
+                        <li><a href="precos.html">Handebol</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li>Telefone: (12121) 1234-5678</a></li>
+                        <li>Email: contato@easyrent.com.br</a></li>
+                        <li>Endereço: Rua XX, XXX,XXXX</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center mt-3">
+                    <p>&copy; 2023 Easy Rent. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

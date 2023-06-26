@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Aluguel de Quadras Esportivas - Easy Rent</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="fontawesome-free-6.4.0-web/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/brands.css" rel="stylesheet">
+    <link href="fontawesome-free-6.4.0-web/css/solid.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <!--header-->
+    <!--Header - menu site-->
+    <!--Header - menu site-->
+    <header class="header">
+        <a href="" class="logo">Easy Rent</a>
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="indexLoginDonoQuadra.html">Dono de quadra</a></li>
+            <li><a href="indexAtletas.html">Atletas</a></li>
+            <li><a href="indexContato.html">Contato</a></li>
+        </ul>
+    </header>
+
+    <!--Formulário de contato-->
+    <br><br><br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Informações de Contato</h2>
+                <p>Entre em contato conosco para obter mais informações sobre nossos serviços.</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa-solid fa-phone fa-shake fa-xs"></i> Telefone: (31) 3435-2956</li>
+                    <li><i class="fa-solid fa-envelope fa-flip fa-xs"></i> Email: contato@easyrent.com.br</li>
+                    <li><i class="fa-solid fa-location-dot fa-beat fa-xs"></i>Endereço: Rua Frei Luiz de Souza, 265,
+                        João Pinheiro</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Entre em Contato</h2>
+                <p>Preencha o formulário abaixo para entrar em contato conosco.</p>
+                <form id="contact-form" method="post" action="success.html" role="form">
+                    <div class="messages"></div>
+                    <div class="controls">
+                        <div class="form-group">
+                            <label for="form_name">Nome *</label>
+                            <input id="form_name" type="text" name="name" class="form-control"
+                                placeholder="Por favor, informe seu nome *" required="required"
+                                data-error="O campo Nome é obrigatório.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form_email">E-mail *</label>
+                            <input id="form_email" type="email" name="email" class="form-control"
+                                placeholder="Por favor, informe seu e-mail *" required="required"
+                                data-error="O campo E-mail é obrigatório.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="form_message">Mensagem *</label>
+                            <textarea id="form_message" name="message" class="form-control"
+                                placeholder="Digite sua mensagem aqui *" rows="4" required="required"
+                                data-error="O campo Mensagem é obrigatório."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <input type="submit" class="btn btn-block btn-primary bg-dark text-white "
+                            onclick="window.location.href='success.html'; return false;">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <br><br>
+    <footer class="bg-dark text-light">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Sobre nós</h5>
+                    <p>Easy Rent é uma empresa especializada em aluguel de quadras esportivas. Temos o compromisso de
+                        oferecer
+                        espaços de alta qualidade para que nossos clientes possam praticar seus esportes favoritos.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Menu</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="indexSobreNos.html">Sobre nós</a></li>
+                        <li><a href="indexAtletas.html">Atletas</a></li>
+                        <li><a href="indexContato.html">Contato</a></li>
+                        <li><a href="indexLoginDonoQuadra.html">Login dono de quadra</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li>Telefone: (31) 3435-2956</a></li>
+                        <li>Email: contato@easyrent.com.br</a></li>
+                        <li>Endereço: Rua Frei Luiz de Souza, 265, João Pinheiro</a></li>
+                    </ul>
+                </div>
+            </div>
+            <br><br><br>
+            <div class="row">
+                <div class="col-md-12 text-center mt-3">
+                    <p>&copy; 2023 Easy Rent. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
